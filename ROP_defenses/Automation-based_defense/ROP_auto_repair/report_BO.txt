@@ -1,0 +1,2 @@
+victim.c_6 fgets
+victim.c_7 strcpy

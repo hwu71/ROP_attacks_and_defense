@@ -1,0 +1,25 @@
+
+victim:     file format elf64-x86-64
+
+
+Disassembly of section .plt:
+
+00000000004003d0 <write@plt-0x10>:
+  4003d0:	ff 35 8a 05 20 00    	pushq  0x20058a(%rip)        # 600960 <_GLOBAL_OFFSET_TABLE_+0x8>
+  4003d6:	ff 25 8c 05 20 00    	jmpq   *0x20058c(%rip)        # 600968 <_GLOBAL_OFFSET_TABLE_+0x10>
+  4003dc:	0f 1f 40 00          	nopl   0x0(%rax)
+
+00000000004003e0 <write@plt>:
+  4003e0:	ff 25 8a 05 20 00    	jmpq   *0x20058a(%rip)        # 600970 <_GLOBAL_OFFSET_TABLE_+0x18>
+  4003e6:	68 00 00 00 00       	pushq  $0x0
+  4003eb:	e9 e0 ff ff ff       	jmpq   4003d0 <_init+0x20>
+
+00000000004003f0 <read@plt>:
+  4003f0:	ff 25 82 05 20 00    	jmpq   *0x200582(%rip)        # 600978 <_GLOBAL_OFFSET_TABLE_+0x20>
+  4003f6:	68 01 00 00 00       	pushq  $0x1
+  4003fb:	e9 d0 ff ff ff       	jmpq   4003d0 <_init+0x20>
+
+0000000000400400 <__libc_start_main@plt>:
+  400400:	ff 25 7a 05 20 00    	jmpq   *0x20057a(%rip)        # 600980 <_GLOBAL_OFFSET_TABLE_+0x28>
+  400406:	68 02 00 00 00       	pushq  $0x2
+  40040b:	e9 c0 ff ff ff       	jmpq   4003d0 <_init+0x20>
