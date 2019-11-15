@@ -1,0 +1,12 @@
+1.pid：14379
+2.起始地址：7f64f4173000
+
+1. RAW BYTES of "/bin/sh\0": 2f 62 69 6e 2f 73 68 00
+2. pid: 14379
+2. Libc start address: 0x7f64f4173000
+3. Buffer address: 0x7ffdb98c5780
+4. RDI gadget address: (offset: 0x116ee2)  7F64F4289EE2
+5. RSI gadget address: (offset: 0x110e3e) 7F64F4283E3E
+6. RDX gadget address: (offset: 0xf5295) 7F64F4268295
+7. Libc start + execve offset: (offset: 0xb8640) 7F64F422B640
+8. distence 0x48 -16 = 56

